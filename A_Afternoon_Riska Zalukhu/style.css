@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 25%;
+}
+
+body {
+    background: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    padding: 5px 50px;
+    background: rgb(82, 134, 155);
+    display: flexbox;
+}
+
+
+.logo {
+    position: relative;
+    padding: 2px;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border: 5px solid;
+    border-color: white;
+
+}
+
+.header .navbar {
+    margin-top: 100%;
+}
+
+.navbar li a {
+    display: block;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid;
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+.navbar li a i {
+    padding-right: 15px;
+}
+
+.navbar li {
+    display: block;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(229, 229, 252);
+}
+
+
+section {
+    margin: 0;
+    height: 100vh;
+
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 25%;
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: -1.1;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: blue;
+    padding-top: 0%;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    ;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: blue;
+    border: 2px solid blue;
+    opacity: 75%;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: blue;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(210, 99, 238);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    padding: 0 25%;
+
+}
+
+.heading {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 50rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 60%;
+    border-radius: 50%;
+    border: .3rem solid skyblue;
+
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+    height: 2rem;
+}
+
+.btn-box.btns a::before {
+    background: violet;
+}
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    margin: 5rem;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.education .education-column {
+    flex: 1 1 2rem;
+}
+
+.education-column .title {
+    font-size: 1.5rem;
+    margin: 0 0 0 2rem;
+}
+
+.education-column .education-box {
+    border-left: .2rem solid blue;
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -.6rem;
+    width: 1rem;
+    height: 1rem;
+    background: blue;
+    border-radius: 50%;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1rem;
+    border: .2rem solid blue;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+.education-content .content .year {
+    font-size: 1rem;
+    color: blue;
+    padding-bottom: .5rem;
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+}
+
+.card .box {
+    width: 90%;
+    height: 150%;
+    box-shadow: 0 5px 10px rgb(129, 127, 127);
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    background: rgb(178, 202, 233);
+}
+
+
+.card .box li {
+    text-align: center;
+    margin: 5px;
+}
+
+.contact {
+    min-height: auto;
+    padding-bottom: 2rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 40%;
+    margin: 1rem 1rem;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 90%;
+    height: 40%;
+    padding: .8rem;
+    font-size: 1rem;
+    border-radius: .6rem;
+    border: .2rem solid rgb(113, 113, 199);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: blue;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: 1rem;
+    display: flex;
+}
+
+.contact form.textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+
+}
